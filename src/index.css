@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +13,7 @@
 
   color-scheme: light dark;
   color: #ffff;
-  background-color: #000000;
+  background-color: #0f0f0f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +23,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   /* place-items: center; */
   min-width: 320px;
