@@ -1,4 +1,3 @@
-import { FiMenu } from "react-icons/fi";
 import { Box, IconButton } from '@mui/material'
 const LeftBox = () => {
   return (
@@ -10,7 +9,7 @@ const LeftBox = () => {
         },
       }}
     >
-      <FiMenu/>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style={{ pointerEvents: 'none', display: 'inherit', width: '24px', height: '24px' }}><path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path></svg>
     </IconButton>
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +48,7 @@ const LeftBox = () => {
         fontSize: 10, 
         color: 'rgba(255,255,255,0.6)',
         paddingTop: 5, 
-        fontWeight: 500, 
+        fontWeight: 400, 
         position: 'absolute', 
     }}>
         UK

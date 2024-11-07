@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
             pt={.5}
             pl={3}
             pr={3}
+            pb={.5}
             flexGrow={1}
             display={'flex'}
             justifyContent={'space-between'}
