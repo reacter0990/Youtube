@@ -1,14 +1,10 @@
-import { MdOutlineVideoCall } from "react-icons/md";
 import { Box, IconButton, Avatar  } from '@mui/material'
-import { IoMdNotificationsOutline  } from "react-icons/io";
 
 const RightBox = () => {
   return (
     <Box display={'flex'} alignItems={'center'} justifyContent={'space-evenly'} minWidth={150}>
     <IconButton color='inherit'
       sx={{
-        // height: '35px',
-        // width: '35px',
         '&:hover': {
             backgroundColor: 'rgba(255,255,255,0.2)', // измените цвет фона при наведении
           },
@@ -18,8 +14,6 @@ const RightBox = () => {
     </IconButton>
     <IconButton color='inherit'
       sx={{
-        // height: '35px',
-        // width: '35px',
         '&:hover': {
             backgroundColor: 'rgba(255,255,255,0.2)', // измените цвет фона при наведении
           },

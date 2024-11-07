@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import Grid from '@mui/material/Grid2'
-import Card from '../components/Card'
+import Card from './Card'
 
 const Section = () => {
   return (
