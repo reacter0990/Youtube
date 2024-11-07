@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import { Box } from "@mui/material"
+import LeftBar from "./LeftBar";
 
 const Home = () => {
   return (
-    <Component className="max-w-[1536px] mx-auto">
-      <Left />
-    </Component>
+    <Box className="max-w-[1536px] mx-auto">
+      <LeftBar />
+    </Box>
   );
 };
 
