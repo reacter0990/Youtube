@@ -1,0 +1,26 @@
+.link {
+    padding: 0;
+}
+
+/* .link:hover {
+    padding: 0;
+    background: #212121;
+    border-radius: 13px;
+} */
+
+.list {
+    row-gap: 5px !important;
+    display: grid !important;
+    padding-top: 12px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 0 !important;
+    grid-template-rows: auto !important;
+}
+
+.list_item_button {
+    height: 40px !important;
+    border-radius: 3px;
+    padding-right: 2px;
+    padding-left: 1.5px;
+}
