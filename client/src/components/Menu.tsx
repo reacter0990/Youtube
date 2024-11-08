@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { ArrayOne, ArrayTwo, ArrayThree, ArrayFour } from "../TS/Arrays";
+import { ArrayOne, ArrayTwo, ArrayThree, ArrayFour, ArrayFive, ArraySix } from "../TS/Arrays";
 
 const Menu = () => {
   return (
@@ -32,6 +32,16 @@ const Menu = () => {
         Навигатор
       </Typography>
       {ArrayFour}
+      <Typography
+        component={"div"}
+        variant="h6"
+        color="white"
+        pl={4}
+        fontSize={17}>
+        Другие возможности
+      </Typography>
+      {ArrayFive}
+      {ArraySix}
     </Box>
   );
 };
