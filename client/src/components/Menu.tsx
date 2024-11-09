@@ -42,6 +42,43 @@ const Menu = () => {
       </Typography>
       {ArrayFive}
       {ArraySix}
+      <Typography
+        component={"div"}
+        variant="subtitle2"
+        pt={'12px'}
+        pl={'24px'}
+        pr={'24px'}
+        fontSize={13}
+        lineHeight={'18px'}
+        color={'rgb(170,170,170)'}
+        >
+        О сервисе Прессе Авторские права Связаться с нами Авторам Рекламодателям Разработчикам
+      </Typography>
+      <Typography
+        component={"div"}
+        variant="subtitle2"
+        pt={'12px'}
+        pl={'24px'}
+        pr={'24px'}
+        fontSize={13}
+        lineHeight={'18px'}
+        color={'rgb(170,170,170)'}
+        >
+       Условия использования Конфиденциальность Правила и безопасность Как работает YouTube Тестирование новых функций
+      </Typography>
+      <Typography
+      component={"div"}
+      variant="subtitle2"
+      pt={'12px'}
+      pl={'24px'}
+      pr={'24px'}
+      pb={'12px'}
+      fontSize={13}
+      lineHeight={'18px'}
+      color={'rgb(170,170,170)'}
+      >
+        © 2024 Google LLC
+      </Typography>
     </Box>
   );
 };
