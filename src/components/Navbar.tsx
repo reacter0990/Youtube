@@ -8,14 +8,19 @@ import RightBox from "./NavbarItems/RightBox";
 const Navbar: React.FC = () => {
   return (
     <Box
-      pt={1.2}
+      pt={1.1}
       pl={3}
       pr={3}
+      pb={1.1}
       flexGrow={1}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
-    >
+      width={"100%"}
+      position={"fixed"}
+      zIndex={100}
+      bgcolor={"#0f0f0f"}
+>
       <LeftBox />
       <CenterBox />
       <RightBox />

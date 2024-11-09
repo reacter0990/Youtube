@@ -41,11 +41,15 @@ const LeftBar = () => {
   const [isFocused_17, setIsFocused_17] = useState(false);
   return (
     <Box
-      maxWidth={255}
-      maxHeight={682.4}
+      maxWidth={260}
+      width={"100%"}
+      paddingTop={"54px"}
+      maxHeight={741.3}
+      height={"auto"}
       sx={{
         overflowX: "hidden",
         overflowY: isScrollBarFocused ? "auto" : "hidden",
+        position: "fixed"
       }}
       onMouseEnter={() => setIsScrollBarFocused(true)}
       onMouseLeave={() => setIsScrollBarFocused(false)}
