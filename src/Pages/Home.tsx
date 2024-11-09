@@ -1,10 +1,10 @@
 import { Box } from "@mui/material"
-import LeftBar from "./LeftBar";
+import Main_Block from "../Pages_Components/Home_page_components/Main_Block";
 
 const Home = () => {
   return (
     <Box className="max-w-[1536px] mx-auto">
-      <LeftBar />
+      <Main_Block />
     </Box>
   );
 };
