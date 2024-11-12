@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
       position={"fixed"}
       zIndex={100}
       bgcolor={"#0f0f0f"}
->
+    >
       <LeftBox />
       <CenterBox />
       <RightBox />
