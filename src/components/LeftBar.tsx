@@ -8,6 +8,7 @@ import {
   ListItemText,
   Divider,
   Typography,
+  AccordionDetails,
 } from "@mui/material";
 import { IoMdHome } from "react-icons/io";
 import { GoHistory } from "react-icons/go";
@@ -18,38 +19,39 @@ import { FaRegClock } from "react-icons/fa6";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import classes from "../CSS/main.module.css";
+import { LuMusic4 } from "react-icons/lu";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
+import { CgGames } from "react-icons/cg";
+import { GiTrophyCup } from "react-icons/gi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegFlag } from "react-icons/fa6";
+import { GoQuestion } from "react-icons/go";
+import { BiSolidMessageError } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
-const LeftBar = () => {
+const LeftBar: React.FC = ({}) => {
   const [isScrollBarFocused, setIsScrollBarFocused] = useState(false);
 
-  const [isFocused_1, setIsFocused_1] = useState(false);
-  const [isFocused_2, setIsFocused_2] = useState(false);
-  const [isFocused_3, setIsFocused_3] = useState(false);
-  const [isFocused_4, setIsFocused_4] = useState(false);
-  const [isFocused_5, setIsFocused_5] = useState(false);
-  const [isFocused_6, setIsFocused_6] = useState(false);
-  const [isFocused_7, setIsFocused_7] = useState(false);
-  const [isFocused_8, setIsFocused_8] = useState(false);
-  const [isFocused_9, setIsFocused_9] = useState(false);
-  const [isFocused_10, setIsFocused_10] = useState(false);
-  const [isFocused_11, setIsFocused_11] = useState(false);
-  const [isFocused_12, setIsFocused_12] = useState(false);
-  const [isFocused_13, setIsFocused_13] = useState(false);
-  const [isFocused_14, setIsFocused_14] = useState(false);
-  const [isFocused_15, setIsFocused_15] = useState(false);
-  const [isFocused_16, setIsFocused_16] = useState(false);
-  const [isFocused_17, setIsFocused_17] = useState(false);
+  const [isClick, setIsClick] = useState(false);
+
+  const handleClickFunction = () => {
+    setIsClick(!isClick);
+  };
   return (
     <Box
       maxWidth={260}
       width={"100%"}
-      paddingTop={"54px"}
-      maxHeight={741.3}
+      top={55}
+      maxHeight={755}
       height={"auto"}
+      paddingBottom={"70px"}
       sx={{
         overflowX: "hidden",
         overflowY: isScrollBarFocused ? "auto" : "hidden",
-        position: "fixed"
+        position: "fixed",
       }}
       onMouseEnter={() => setIsScrollBarFocused(true)}
       onMouseLeave={() => setIsScrollBarFocused(false)}
@@ -94,11 +96,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_1(true)}
-            onMouseLeave={() => setIsFocused_1(false)}
-            style={{
-              backgroundColor: isFocused_1 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <SiYoutubeshorts color="#fff" fontSize={22} />
@@ -118,11 +116,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_2(true)}
-            onMouseLeave={() => setIsFocused_2(false)}
-            style={{
-              backgroundColor: isFocused_2 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <MdOutlineSubscriptions color="#fff" fontSize={22} />
@@ -168,11 +162,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_3(true)}
-            onMouseLeave={() => setIsFocused_3(false)}
-            style={{
-              backgroundColor: isFocused_3 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <GoHistory color="#fff" fontSize={23} />
@@ -192,12 +182,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_4(true)}
-            onMouseDown={() => setIsFocused_4(true)}
-            onMouseLeave={() => setIsFocused_4(false)}
-            style={{
-              backgroundColor: isFocused_4 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <CgPlayList
@@ -221,11 +206,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_5(true)}
-            onMouseLeave={() => setIsFocused_5(false)}
-            style={{
-              backgroundColor: isFocused_5 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <BiVideo color="#fff" fontSize={22} />
@@ -245,11 +226,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_6(true)}
-            onMouseLeave={() => setIsFocused_6(false)}
-            style={{
-              backgroundColor: isFocused_6 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <FaRegClock color="#fff" fontSize={22} />
@@ -269,11 +246,7 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_7(true)}
-            onMouseLeave={() => setIsFocused_7(false)}
-            style={{
-              backgroundColor: isFocused_7 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <ListItemIcon sx={{ minWidth: 50 }}>
               <AiOutlineLike color="#fff" fontSize={22} />
@@ -301,14 +274,11 @@ const LeftBar = () => {
       </Typography>
       <List
         sx={{
-          pt: 2,
-          pl: 2,
-          pr: 2,
-          pb: 0,
-          height: "100%",
           display: "grid",
           gridTemplateColumns: "auto",
           rowGap: "3px",
+          pl: 2,
+          pr: 2,
         }}
       >
         <ListItem sx={{ p: 0 }}>
@@ -319,16 +289,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_8(true)}
-            onMouseLeave={() => setIsFocused_8(false)}
-            style={{
-              backgroundColor: isFocused_8 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -337,14 +303,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -359,16 +326,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_9(true)}
-            onMouseLeave={() => setIsFocused_9(false)}
-            style={{
-              backgroundColor: isFocused_9 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -377,14 +340,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -399,16 +363,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_10(true)}
-            onMouseLeave={() => setIsFocused_10(false)}
-            style={{
-              backgroundColor: isFocused_10 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -417,14 +377,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -439,16 +400,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_11(true)}
-            onMouseLeave={() => setIsFocused_11(false)}
-            style={{
-              backgroundColor: isFocused_11 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -457,14 +414,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -479,16 +437,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_12(true)}
-            onMouseLeave={() => setIsFocused_12(false)}
-            style={{
-              backgroundColor: isFocused_12 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -497,14 +451,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -519,16 +474,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_13(true)}
-            onMouseLeave={() => setIsFocused_13(false)}
-            style={{
-              backgroundColor: isFocused_13 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -537,14 +488,15 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
@@ -559,16 +511,12 @@ const LeftBar = () => {
               pl: 1.5,
               height: 40,
             }}
-            onMouseEnter={() => setIsFocused_14(true)}
-            onMouseLeave={() => setIsFocused_14(false)}
-            style={{
-              backgroundColor: isFocused_14 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
           >
             <div
               style={{
                 maxWidth: "30px",
-                height: "auto",
+                maxHeight: "30px",
                 overflow: "hidden",
                 borderRadius: "100%",
               }}
@@ -577,140 +525,536 @@ const LeftBar = () => {
                 style={{
                   width: "100%",
                 }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
+                src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
                 alt=""
               />
             </div>
             <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
+              primary="Brawl Stars"
+              primaryTypographyProps={{
+                style: { fontSize: 14, color: "#fff" },
+              }}
               sx={{
                 pl: 2.9,
               }}
             />
+          </ListItemButton>
+        </ListItem>
+        {isClick && (
+          <>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem sx={{ p: 0 }}>
+              <ListItemButton
+                sx={{
+                  borderRadius: 3,
+                  pr: 2,
+                  pl: 1.5,
+                  height: 40,
+                }}
+                className={classes.hoveredLink}
+              >
+                <div
+                  style={{
+                    maxWidth: "30px",
+                    maxHeight: "30px",
+                    overflow: "hidden",
+                    borderRadius: "100%",
+                  }}
+                >
+                  <img
+                    style={{
+                      width: "100%",
+                    }}
+                    src="https://yt3.ggpht.com/zoHlZ_RotyRUC4aict9E5w96TP1hcDs4SI5Uw6qN3GHj6IUkzVeStInXYbCkVNAmJuU4GqmF=s88-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                  />
+                </div>
+                <ListItemText
+                  primary="Brawl Stars"
+                  primaryTypographyProps={{
+                    style: { fontSize: 14, color: "#fff" },
+                  }}
+                  sx={{
+                    pl: 2.9,
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </>
+        )}
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            onClick={handleClickFunction}
+            sx={{
+              maxWidth: 200,
+              borderRadius: 2,
+              pt: 1.4,
+              pb: 1.4,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className={classes.hoveredLink}
+          >
+            {isClick ? (
+              <IoIosArrowUp style={{ color: "#fff" }} />
+            ) : (
+              <IoIosArrowDown style={{ color: "#fff" }} />
+            )}
+          </ListItemButton>
+        </ListItem>
+        <Divider
+          component="li"
+          sx={{ bgcolor: "rgba(255, 255, 255, 0.3)", mt: 2, mb: 2 }}
+        />
+      </List>
+      <Typography
+        component={"div"}
+        variant="h6"
+        color="white"
+        pl={4}
+        fontSize={17}
+      >
+        Навигатор
+      </Typography>
+      <List
+        sx={{
+          pt: 2,
+          pl: 2,
+          pr: 2,
+          pb: 1,
+          // height: "100%",
+          display: "grid",
+          gridTemplateColumns: "auto",
+          rowGap: "3px",
+        }}
+      >
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
+          >
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <FaArrowTrendUp />
+            </ListItemIcon>
+            <ListItemText primary="В тренде" />
           </ListItemButton>
         </ListItem>
         <ListItem sx={{ p: 0 }}>
           <ListItemButton
-            sx={{
-              borderRadius: 3,
-              pr: 2,
-              pl: 1.5,
-              height: 40,
-            }}
-            onMouseEnter={() => setIsFocused_15(true)}
-            onMouseLeave={() => setIsFocused_15(false)}
-            style={{
-              backgroundColor: isFocused_15 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
           >
-            <div
-              style={{
-                maxWidth: "30px",
-                height: "auto",
-                overflow: "hidden",
-                borderRadius: "100%",
-              }}
-            >
-              <img
-                style={{
-                  width: "100%",
-                }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
-                alt=""
-              />
-            </div>
-            <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
-              sx={{
-                pl: 2.9,
-              }}
-            />
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <LuMusic4 />
+            </ListItemIcon>
+            <ListItemText primary="Музыка" />
           </ListItemButton>
         </ListItem>
         <ListItem sx={{ p: 0 }}>
           <ListItemButton
-            sx={{
-              borderRadius: 3,
-              pr: 2,
-              pl: 1.5,
-              height: 40,
-            }}
-            onMouseEnter={() => setIsFocused_16(true)}
-            onMouseLeave={() => setIsFocused_16(false)}
-            style={{
-              backgroundColor: isFocused_16 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
           >
-            <div
-              style={{
-                maxWidth: "30px",
-                height: "auto",
-                overflow: "hidden",
-                borderRadius: "100%",
-              }}
-            >
-              <img
-                style={{
-                  width: "100%",
-                }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
-                alt=""
-              />
-            </div>
-            <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
-              sx={{
-                pl: 2.9,
-              }}
-            />
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <CgGames />
+            </ListItemIcon>
+            <ListItemText primary="Видеоигры" />
           </ListItemButton>
         </ListItem>
         <ListItem sx={{ p: 0 }}>
           <ListItemButton
-            sx={{
-              borderRadius: 3,
-              pr: 2,
-              pl: 1.5,
-              height: 40,
-            }}
-            onMouseEnter={() => setIsFocused_17(true)}
-            onMouseLeave={() => setIsFocused_17(false)}
-            style={{
-              backgroundColor: isFocused_17 ? "#212121" : "transparent",
-            }}
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
           >
-            <div
-              style={{
-                maxWidth: "30px",
-                height: "auto",
-                overflow: "hidden",
-                borderRadius: "100%",
-              }}
-            >
-              <img
-                style={{
-                  width: "100%",
-                }}
-                src="https://yt3.ggpht.com/ytc/AIdro_lqcW7QiirwWk-U6Av4djDjf0TGNWFdg2PCBFRIIXDN878=s88-c-k-c0x00ffffff-no-rj"
-                alt=""
-              />
-            </div>
-            <ListItemText
-              primary="Ulbi TV"
-              color="white"
-              primaryTypographyProps={{ style: { fontSize: 14 } }}
-              sx={{
-                pl: 2.9,
-              }}
-            />
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <GiTrophyCup />
+            </ListItemIcon>
+            <ListItemText primary="Спорт" />
           </ListItemButton>
         </ListItem>
+        <Divider
+          component="li"
+          sx={{ bgcolor: "rgba(255, 255, 255, 0.3)", mt: 2, mb: 2 }}
+        />
+      </List>
+      <Typography
+        component={"div"}
+        variant="h6"
+        color="white"
+        pl={4}
+        fontSize={17}
+      >
+        Дополнительно
+      </Typography>
+      <List
+        sx={{
+          pl: 2,
+          pr: 2,
+          pb: 1,
+          display: "grid",
+          gridTemplateColumns: "auto",
+          rowGap: "3px",
+        }}
+      >
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
+          >
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <IoSettingsOutline />
+            </ListItemIcon>
+            <ListItemText primary="Настройки" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
+          >
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <FaRegFlag />
+            </ListItemIcon>
+            <ListItemText primary="Жалобы" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
+          >
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <GoQuestion />
+            </ListItemIcon>
+            <ListItemText primary="Справка" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem sx={{ p: 0 }}>
+          <ListItemButton
+            className={classes.hoveredLink}
+            sx={{ borderRadius: 3, pr: 2, pl: 1.5, height: 40, maxWidth: 200 }}
+          >
+            <ListItemIcon sx={{ color: "#fff", fontSize: 22 }}>
+              <BiSolidMessageError />
+            </ListItemIcon>
+            <ListItemText primary="Отправить отзыв" className="!text-[10px]" />
+          </ListItemButton>
+        </ListItem>
+        <Divider
+          component="li"
+          sx={{ bgcolor: "rgba(255, 255, 255, 0.3)", mt: 2, mb: 2 }}
+        />
+      </List>
+      <List
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "auto",
+          rowGap: "20px",
+          pb: 3,
+        }}
+      >
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"https://www.youtube.com/howyoutubeworks/policies/copyright/"}
+        >
+          <Typography
+            component={"div"}
+            variant="h6"
+            color="#aaa"
+            pl={4}
+            fontSize={14}
+            maxWidth={235}
+          >
+            О сервисе Прессе Авторские права Связаться с нами Авторам
+            Рекламодателям Разработчикам
+          </Typography>
+        </Link>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={
+            "https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"
+          }
+        >
+          <Typography
+            component={"div"}
+            variant="h6"
+            color="#aaa"
+            pl={4}
+            fontSize={14}
+            maxWidth={235}
+          >
+            Условия использования Конфиденциальность Правила и безопасность Как
+            работает YouTube Тестирование новых функций
+          </Typography>
+        </Link>
+        <Typography
+          component={"div"}
+          variant="h6"
+          color="#717171"
+          pl={4}
+          fontSize={13}
+        >
+          © 2024 Google LLC
+        </Typography>
       </List>
     </Box>
   );
