@@ -11,37 +11,37 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AudiRs6 from '../Images/maxresdefault.jpg'
 
 export default function RecipeReviewCard() {
-    const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState(false);
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
-    return (
-        <Card sx={{ borderRadius: 4, bgcolor: '#000' }}>
-            <CardMedia
-                component="img"
-                height="224.84px"
-                image={AudiRs6}
-                alt="Paella dish"
-            />
-            <CardHeader
-                sx={{ flexGrow: 1, pl: 0, pr: 0, color: '#fff', fontSize: '16px' }}
-                avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
-                    </Avatar>
-                }
-                action={
-                    <IconButton aria-label="settings" sx={{ color: '#fff' }}>
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
-                subheaderTypographyProps={{ style: { color: '#fff', fontSize: '16px' } }} 
-            />
-            {/* <CardContent>
+  return (
+    <Card sx={{ borderRadius: 4, bgcolor: '#000' }}>
+      <CardMedia
+        component="img"
+        height="224.84px"
+        image={AudiRs6}
+        alt="Paella dish"
+      />
+      <CardHeader
+        sx={{ flexGrow: 1, pl: 0, pr: 0, color: '#fff', fontSize: '16px' }}
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            R
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings" sx={{ color: '#fff' }}>
+            <MoreVertIcon />
+          </IconButton>
+        }
+        title="Shrimp and Chorizo Paella"
+        subheader="September 14, 2016"
+        subheaderTypographyProps={{ style: { color: '#fff', fontSize: '16px' } }}
+      />
+      {/* <CardContent>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           This impressive paella is a perfect party dish and a fun meal to cook
           together with your guests. Add 1 cup of frozen peas along with the mussels,
@@ -93,6 +93,6 @@ export default function RecipeReviewCard() {
           </Typography>
         </CardContent>
       </Collapse> */}
-        </Card>
-    );
+    </Card>
+  );
 }

@@ -64,19 +64,19 @@ const Section = () => {
           Просмотрено
         </Box>
       </Box>
-      <Box flexGrow={1} pt={'24px'}>
-        <Grid container spacing={2}>
+      <Box flexGrow={1} pt={'24px'} pl={'245px'}>
+        <Grid container spacing={2.8}>
           <Grid size={4}>
-            <Card/>
+            <Card />
           </Grid>
           <Grid size={4}>
-          <Card/>
+            <Card />
           </Grid>
           <Grid size={4}>
-          <Card/>
+            <Card />
           </Grid>
           <Grid size={4}>
-          <Card/>
+            <Card />
           </Grid>
         </Grid>
       </Box>
