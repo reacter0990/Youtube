@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { FiMenu } from "react-icons/fi";
 import { Box, IconButton } from "@mui/material";
 
-const LeftBox = () => {
+const LeftBox: React.FC = ({ toggleLeftBar }) => {
   return (
     <Box
       component={"div"}
@@ -10,6 +11,7 @@ const LeftBox = () => {
       position={"relative"}
     >
       <IconButton
+        onClick={toggleLeftBar}
         color="inherit"
         sx={{
           "&:hover": {
