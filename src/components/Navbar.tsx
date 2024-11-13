@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/material";
 import LeftBox from "./NavbarItems/LeftBox";
 import CenterBox from "./NavbarItems/CenterBox";
 import RightBox from "./NavbarItems/RightBox";
 // import Logo from '../assets/YouTube-Logo.wine.svg'
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = ({ toggleLeftBar }) => {
   return (
     <Box
       pt={1.1}
@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
       zIndex={100}
       bgcolor={"#0f0f0f"}
     >
-      <LeftBox />
+      <LeftBox toggleLeftBar={toggleLeftBar} />
       <CenterBox />
       <RightBox />
     </Box>

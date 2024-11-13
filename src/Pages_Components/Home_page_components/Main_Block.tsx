@@ -11,7 +11,7 @@ interface BlockItem {
   videoUrl: string;
 }
 
-const Main_Block: React.FC = () => {
+const Main_Block: React.FC = ({ isOpen }) => {
   const blocksList: BlockItem[] = [
     {
       id: 1,
@@ -129,8 +129,8 @@ const Main_Block: React.FC = () => {
         gridTemplateColumns: "auto auto auto",
         columnGap: "5px",
         rowGap: "17px",
-        paddingLeft: "275px",
-        paddingTop: "160px",
+        paddingLeft: isOpen ? "275px" : "80px",
+        paddingTop: "140px",
       }}
     >
       {blocksList.map((item, index) => {

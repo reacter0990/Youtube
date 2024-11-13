@@ -1,21 +1,28 @@
+import { useState } from 'react';
 import { Box } from "@mui/material";
 import Navbar from "./components/Navbar";
 // import ThemeBlur from "./components/ThemeBlur";
 import "./App.css";
 import Home from "./Pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LeftBar from "./components/LeftBar";
 import BottomBar from "./components/BottomBar";
+import LeftBar from "./components/LeftBar";
 
 function App() {
+  const [isLeftBarOpen, setLeftBarOpen] = useState(false);
+
+  const toggleLeftBar = () => {
+    setLeftBarOpen(!isLeftBarOpen);
+    console.log(isLeftBarOpen)
+  };
   return (
     <Box flexGrow={1}>
       <Router>
-        <Navbar />
+        <Navbar toggleLeftBar={toggleLeftBar} />
         <BottomBar />
-        <LeftBar />
+        <LeftBar isOpen={isLeftBarOpen} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isOpen={isLeftBarOpen} />} />
         </Routes>
       </Router>
     </Box>
