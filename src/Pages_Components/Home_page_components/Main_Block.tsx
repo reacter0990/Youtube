@@ -127,15 +127,16 @@ const Main_Block: React.FC = ({ isOpen }) => {
       sx={{
         display: "grid",
         gridTemplateColumns: "auto auto auto",
-        columnGap: "5px",
-        rowGap: "17px",
-        paddingLeft: isOpen ? "275px" : "80px",
+        columnGap: isOpen ? "5px" : "5px",
+        rowGap: isOpen ? "17px" : "12px",
+        paddingLeft: isOpen ? "275px" : "118px",
         paddingTop: "140px",
       }}
     >
       {blocksList.map((item, index) => {
         return (
           <Block
+            isOpen={isOpen}
             key={item.id}
             index={index}
             img={item.img}

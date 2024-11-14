@@ -12,16 +12,27 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import Tooltip from "@mui/material/Tooltip";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import Dialog from "@mui/material/Dialog";
-import PersonIcon from "@mui/icons-material/Person";
-import AddIcon from "@mui/icons-material/Add";
-import { blue } from "@mui/material/colors";
 import { IoLogoGoogle } from "react-icons/io5";
 import { BiSolidUserAccount } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
-import classes from '../../CSS/main.module.css'
+import classes from "../../CSS/main.module.css";
+import { SiYoutube } from "react-icons/si";
+import { FaCircleDollarToSlot } from "react-icons/fa6";
+import { FaUserShield } from "react-icons/fa";
+import { FaRegMoon } from "react-icons/fa";
+import { LuLanguages } from "react-icons/lu";
+import { FaShieldHalved } from "react-icons/fa6";
+import { BsGlobe } from "react-icons/bs";
+import { FaRegKeyboard } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { BiSolidMessageError } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import Badge from "@mui/material/Badge";
+import { Typography } from "@mui/material";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const emails = ["Аккаунт Google", "Сменить аккаунт", "Выйти"];
 
@@ -42,78 +53,562 @@ function SimpleDialog(props: SimpleDialogProps) {
     onClose(value);
   };
 
+  const [isScrollBarFocused, setIsScrollBarFocused] = useState(false);
+
   return (
     <Dialog onClose={handleClose} open={open}>
-      <Box sx={{ bgcolor: "#323232", minWidth: 300, pl: 2, pr: 2 }}>
-        <Box sx={{ display: "flex", alignItems: "center", pb: 2 }}>
+      <Box sx={{ bgcolor: "#323232", minWidth: 370 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            pb: 2,
+            ml: 1.2,
+            mt: 0.5,
+          }}
+        >
           <Avatar
             alt="Remy Sharp"
             src="/static/images/avatar/1.jpg"
-            sx={{ height: "47px", width: "47px", ml: 2, mt: 2 }}
+            sx={{ height: "47px", width: "47px" }}
           />
-          <ListItemText
-            primary={"Remy Sharp"}
-            sx={{ color: "#fff", mt: 2, ml: 3 / 2 }}
-          />
+          <Box sx={{ mt: 2, ml: 1.2 }}>
+            <ListItemText primary={"Remy Sharp"} sx={{ color: "#fff" }} />
+            <Tooltip title={"@remysharp2381"}>
+              <ListItemText
+                primary={"@remysharp2381"}
+                primaryTypographyProps={{ style: { fontSize: 14 } }}
+                sx={{ color: "#fff" }}
+              />
+            </Tooltip>
+          </Box>
+          <Link style={{ textDecoration: "none" }} to={"/"}>
+            <Tooltip title={"Посмотреть канал"}>
+              <ListItemText
+                sx={{ color: "#3ea6ff", mt: 2, ml: 6 }}
+                primary={"Посмотреть канал"}
+                primaryTypographyProps={{ style: { fontSize: 14 } }}
+              />
+            </Tooltip>
+          </Link>
         </Box>
         <Divider sx={{ bgcolor: "#fff" }} />
-        <List sx={{ pt: 0 }}>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 23, pr: 1 }}>
-                <IoLogoGoogle />
-              </ListItemIcon>
-              <ListItemText primary="Аккаунт Google" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 24, pr: 1 }}>
-                <BiSolidUserAccount />
-              </ListItemIcon>
-              <ListItemText primary="Сменить аккаунт" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 23, pr: 1 }}>
-                <MdLogout />
-              </ListItemIcon>
-              <ListItemText primary="Выйти" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <Divider sx={{ bgcolor: '#fff' }} />
-        <List sx={{ pt: 0 }}>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 23, pr: 1 }}>
-              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M10 9.35 15 12l-5 2.65ZM12 3a.73.73 0 00-.31.06L4.3 7.28a.79.79 0 00-.3.52v8.4a.79.79 0 00.3.52l7.39 4.22a.83.83 0 00.62 0l7.39-4.22a.79.79 0 00.3-.52V7.8a.79.79 0 00-.3-.52l-7.39-4.22A.73.73 0 0012 3m0-1a1.6 1.6 0 01.8.19l7.4 4.22A1.77 1.77 0 0121 7.8v8.4a1.77 1.77 0 01-.8 1.39l-7.4 4.22a1.78 1.78 0 01-1.6 0l-7.4-4.22A1.77 1.77 0 013 16.2V7.8a1.77 1.77 0 01.8-1.39l7.4-4.22A1.6 1.6 0 0112 2Zm0 4a.42.42 0 00-.17 0l-4.7 2.8a.59.59 0 00-.13.39v5.61a.65.65 0 00.13.37l4.7 2.8A.42.42 0 0012 18a.34.34 0 00.17 0l4.7-2.81a.56.56 0 00.13-.39V9.19a.62.62 0 00-.13-.37L12.17 6A.34.34 0 0012 6m0-1a1.44 1.44 0 01.69.17L17.39 8A1.46 1.46 0 0118 9.19v5.61a1.46 1.46 0 01-.61 1.2l-4.7 2.81A1.44 1.44 0 0112 19a1.4 1.4 0 01-.68-.17L6.62 16A1.47 1.47 0 016 14.8V9.19A1.47 1.47 0 016.62 8l4.7-2.8A1.4 1.4 0 0112 5Z"></path></svg>
-              </ListItemIcon>
-              <ListItemText primary="Творческая студия YouTube" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 24, pr: 1 }}>
-                <BiSolidUserAccount />
-              </ListItemIcon>
-              <ListItemText primary="Сменить аккаунт" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemButton className={classes.hoverButton} sx={{ borderRadius: 2 }}>
-              <ListItemIcon sx={{ color: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: 23, pr: 1 }}>
-                <MdLogout />
-              </ListItemIcon>
-              <ListItemText primary="Выйти" sx={{ color: "#fff" }} />
-            </ListItemButton>
-          </ListItem>
-        </List>
+        <Box
+          sx={{
+            overflowX: "hidden",
+            overflowY: isScrollBarFocused ? "auto" : "hidden",
+            maxHeight: "500px",
+          }}
+          onMouseEnter={() => setIsScrollBarFocused(true)}
+          onMouseLeave={() => setIsScrollBarFocused(false)}
+        >
+          <List sx={{ pt: 0, pl: 1, pr: 1 }}>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <IoLogoGoogle />
+                </ListItemIcon>
+                <ListItemText primary="Аккаунт Google" sx={{ color: "#fff" }} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 24,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <BiSolidUserAccount />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Сменить аккаунт"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <MdLogout />
+                </ListItemIcon>
+                <ListItemText primary="Выйти" sx={{ color: "#fff" }} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider sx={{ bgcolor: "#fff" }} />
+          <List sx={{ pt: 0, pl: 1, pr: 1 }}>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <SiYoutube />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Творческая студия YouTube"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 24,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <FaCircleDollarToSlot />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Покупки и платные подписки"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider sx={{ bgcolor: "#fff" }} />
+          <List sx={{ pt: 0, pl: 1, pr: 1 }}>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <FaUserShield />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Выши данные на YouTube"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <FaRegMoon />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Тема: как на устройстве"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <LuLanguages />
+                </ListItemIcon>
+                <ListItemText primary="Язык: Русский" sx={{ color: "#fff" }} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <FaShieldHalved />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Безопасный режим: откл."
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <BsGlobe />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Страна: Азербайджан"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <FaRegKeyboard />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Быстрые клавиши"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider sx={{ bgcolor: "#fff" }} />
+          <List sx={{ pt: 0, pl: 1, pr: 1 }}>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <IoSettingsOutline />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Быстрые клавиши"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider sx={{ bgcolor: "#fff" }} />
+          <List sx={{ pt: 0, pl: 1, pr: 1 }}>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <AiOutlineQuestionCircle />
+                </ListItemIcon>
+                <ListItemText primary="Справка" sx={{ color: "#fff" }} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disableGutters>
+              <ListItemButton
+                className={classes.hoverButton}
+                sx={{ borderRadius: 2, display: "flex", alignItems: "center" }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize: 23,
+                    pr: 1,
+                  }}
+                  className={classes.hoverButton}
+                >
+                  <BiSolidMessageError />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Отправить отзыв"
+                  sx={{ color: "#fff" }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Box>
       </Box>
     </Dialog>
   );
 }
+
+function NotificationsModal({ isOpen }) {
+  const list = [
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+    {
+      logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
+      text: 'На канале "Brawl Stars" появилось новое видео: "💀 GO CLAIM YOUR 10 DEAD BOXES!!! 💀". Советуем его посмотреть.',
+      description: "11 дней назад",
+      image: "https://i.ytimg.com/vi/N3rZ_t3i1PE/hqdefault.jpg",
+    },
+  ];
+
+  const [isScrollBarFocused, setIsScrollBarFocused] = useState(false);
+  return (
+    <>
+      {!isOpen ? (
+        <Box></Box>
+      ) : (
+          <Box
+            maxWidth={480}
+            position={"fixed"}
+            top={50}
+            minHeight={580}
+            width={"100%"}
+            zIndex={99}
+            right={20}
+            bgcolor={"#323232"}
+            sx={{ borderRadius: "10px" }}>
+            <Box
+              maxHeight={580}
+              pt={2}
+              pl={2}
+              pr={1}
+              display={"grid"}
+              gridTemplateColumns={"auto"}
+              rowGap={"10px"}
+              sx={{
+                overflowX: "hidden",
+                overflowY: isScrollBarFocused ? "auto" : "hidden",
+              }}
+              onMouseEnter={() => setIsScrollBarFocused(true)}
+              onMouseLeave={() => setIsScrollBarFocused(false)}
+            >
+              {list.map((block, index) => {
+                return (
+                  <Array
+                    key={index}
+                    index={index}
+                    logo={block.logo}
+                    text={block.text}
+                    description={block.description}
+                    image={block.image}
+                  />
+                );
+              })}
+            </Box>
+          </Box>
+      )}
+    </>
+  );
+}
+
+const Array = ({ index, logo, text, description, image }) => {
+  return (
+    <Link style={{ textDecoration: "none" }} to={`/content/${index}`}>
+      <Box
+        height={"auto"}
+        width={"100%"}
+        display={"flex"}
+        alignItems={"start"}
+        pt={1}
+        pb={1}
+        pl={1.2}
+        pr={1.2}
+        className={classes.hoveredBlock}
+        sx={{ borderRadius: 2 }}
+      >
+        <Avatar
+          alt={"Brawl Start"}
+          src={logo}
+          sx={{ height: "50px", width: "50px" }}
+        />
+        <Box
+          display={"grid"}
+          gridTemplateColumns={"auto"}
+          rowGap={"2px"}
+          pl={2}
+          pr={2}
+        >
+          <Typography
+            component={"div"}
+            variant={"h5"}
+            color={"#fff"}
+            fontSize={15}
+          >
+            {text}
+          </Typography>
+          <Typography
+            component={"div"}
+            variant={"h6"}
+            color={"#aaa"}
+            fontSize={14}
+          >
+            {description}
+          </Typography>
+        </Box>
+        <img
+          style={{ width: "100px", height: "auto", borderRadius: 2 }}
+          src={image}
+          alt=""
+        />
+        <IconButton
+          className={classes.hoverButton}
+          sx={{ color: "#fff", ml: 1 }}
+        >
+          <BsThreeDotsVertical />
+        </IconButton>
+      </Box>
+    </Link>
+  );
+};
+
+export { Array };
 
 const RightBox: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -126,6 +621,12 @@ const RightBox: React.FC = () => {
   const handleClose = (value: string) => {
     setOpen(false);
     setSelectedValue(value);
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModalOpen = () => {
+    setIsModalOpen(!isModalOpen);
   };
   return (
     <Box
@@ -158,10 +659,14 @@ const RightBox: React.FC = () => {
               backgroundColor: "rgba(255,255,255,0.2)",
             },
           }}
+          onClick={toggleModalOpen}
         >
-          <IoMdNotificationsOutline fontSize={25} />
+          <Badge badgeContent={"+9"} color={"error"}>
+            <IoMdNotificationsOutline fontSize={25} />
+          </Badge>
         </IconButton>
       </Tooltip>
+      <NotificationsModal onClose={handleClose} open={open} isOpen={isModalOpen} />
       <Tooltip title="Profile">
         <ListItemButton
           sx={{

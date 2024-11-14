@@ -31,7 +31,6 @@ import { FaRegFlag } from "react-icons/fa6";
 import { GoQuestion } from "react-icons/go";
 import { BiSolidMessageError } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { IoHomeOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
 
 const LeftBar: React.FC = ({ isOpen }) => {
@@ -47,43 +46,70 @@ const LeftBar: React.FC = ({ isOpen }) => {
         <Box
           maxWidth={20}
           width={"100%"}
-          top={55}
+          top={60}
+          pl={1.7}
           maxHeight={755}
           height={"auto"}
           paddingBottom={"70px"}
           position={"fixed"}
         >
-          <List sx={{ display: 'grid', gridTemplateColumns: 'auto', rowGap: '3px' }}>
+          <List
+            sx={{ display: "grid", gridTemplateColumns: "auto", rowGap: "6px" }}
+          >
             <ListItem sx={{ p: 0 }}>
-              <ListItemButton sx={{ display: 'grid', gridTemplateColumns: 'auto' }}>
-                <ListItemIcon sx={{ color: "#fff", fontSize: 25 }}>
-                  <IoHomeOutline />
+              <ListItemButton
+                sx={{ display: "grid", gridTemplateColumns: "auto", borderRadius: 3, maxWidth: 86, pt: 2 }}
+                className={classes.hoveredLink}
+              >
+                <ListItemIcon sx={{ color: "#fff", fontSize: 25, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <IoMdHome />
                 </ListItemIcon>
-                <ListItemText primary={"Главная"} style={{ fontSize: ' 10px' }} />
+                <ListItemText
+                  primary={"Главная"}
+                  primaryTypographyProps={{ style: { fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center' } }}
+                />
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ p: 0 }}>
-              <ListItemButton sx={{ display: 'grid', gridTemplateColumns: 'auto' }}>
-                <ListItemIcon sx={{ color: "#fff", fontSize: 25 }}>
+              <ListItemButton
+                sx={{ display: "grid", gridTemplateColumns: "auto", borderRadius: 3, maxWidth: 86, pt: 2 }}
+                className={classes.hoveredLink}
+              >
+                <ListItemIcon sx={{ color: "#fff", fontSize: 25, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <SiYoutubeshorts />
                 </ListItemIcon>
-                <ListItemText primary={"Shorts"} style={{ fontSize: ' 10px' }} />
+                <ListItemText
+                  primary={"Shorts"}
+                  primaryTypographyProps={{ style: { fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center' } }}
+                />
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ p: 0 }}>
-              <ListItemButton sx={{ display: 'grid', gridTemplateColumns: 'auto' }}>
-                <ListItemIcon sx={{ color: "#fff", fontSize: 25 }}>
+              <ListItemButton
+                sx={{ display: "grid", gridTemplateColumns: "auto", borderRadius: 3, maxWidth: 86, pt: 2 }}
+                className={classes.hoveredLink}
+              >
+                <ListItemIcon sx={{ color: "#fff", fontSize: 25, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <MdOutlineSubscriptions />
                 </ListItemIcon>
-                <ListItemText primary={"Подписки"} style={{ fontSize: ' 10px' }} />
+                <ListItemText
+                  primary={"Подписки"}
+                  primaryTypographyProps={{ style: { fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center' } }}
+                />
               </ListItemButton>
             </ListItem>
             <ListItem sx={{ p: 0 }}>
-              <ListItemButton sx={{ display: 'grid', gridTemplateColumns: 'auto' }}>
-                <ListItemIcon sx={{ color: "#fff", fontSize: 25 }}>
+              <ListItemButton
+                sx={{ display: "grid", gridTemplateColumns: "auto", borderRadius: 3, maxWidth: 86, pt: 2 }}
+                className={classes.hoveredLink}
+              >
+                <ListItemIcon sx={{ color: "#fff", fontSize: 25, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <FaRegUserCircle />
                 </ListItemIcon>
-                <ListItemText primary={"Вы"} style={{ fontSize: ' 10px' }} />
+                <ListItemText
+                  primary={"Вы"}
+                  primaryTypographyProps={{ style: { fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center' } }}
+                />
               </ListItemButton>
             </ListItem>
           </List>
