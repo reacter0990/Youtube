@@ -32,6 +32,7 @@ const Block: React.FC<BlockProps> = ({
   logo,
   description,
   chanel_name,
+  isOpen
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -184,8 +185,8 @@ const Block: React.FC<BlockProps> = ({
   return (
     <Box
       sx={{
-        maxWidth: "370px",
-        height: "330px",
+        maxWidth: isOpen ? "370px" : '430px',
+        height: isOpen ? "330px" : '354px',
         borderRadius: "10px",
         overflow: "hidden",
       }}

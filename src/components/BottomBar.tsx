@@ -12,7 +12,7 @@ interface BottomBarProps {
   id: number;
 }
 
-const BottomBar: React.FC<BottomBarProps> = ({}) => {
+const BottomBar: React.FC<BottomBarProps> = ({ isOpen }) => {
   return (
     <Box
       sx={{
@@ -22,10 +22,10 @@ const BottomBar: React.FC<BottomBarProps> = ({}) => {
         pb: 0.2,
         position: "fixed",
         width: "100%",
-        maxWidth: "1200px",
+        maxWidth: isOpen ? "1256px" : '1400px',
         top: "68px",
         bgcolor: "#0f0f0f",
-        left: "261px",
+        left: isOpen ? "261px" : '102px',
         zIndex: 99,
       }}
     >
@@ -45,6 +45,7 @@ const BottomBar: React.FC<BottomBarProps> = ({}) => {
               pt: 0.4,
               pb: 0.4,
             }}
+            className={classes.choosenLink}
           >
             <ListItemText
               primary="Все"

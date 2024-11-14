@@ -1,9 +1,9 @@
 .hoverButton:hover {
-    background: #282828;
+    background: #282828 !important;
 }
 
 .hoverButton:focus {
-    background: #282828;
+    background: #282828 !important;
 }
 
 .choosenLink:hover {
@@ -20,4 +20,8 @@
 
 .hoveredLink:focus {
     background: #212121 !important;
+}
+
+.hoveredBlock:hover {
+    background: #171717 !important;
 }
