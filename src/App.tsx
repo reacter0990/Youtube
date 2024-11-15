@@ -25,7 +25,7 @@ function App() {
     <Box flexGrow={1}>
       <Router>
         <Navbar toggleModalOpen={toggleModalOpen} toggleLeftBar={toggleLeftBar} />
-        <BottomBar />
+        <BottomBar isOpen={isLeftBarOpen} />
         <LeftBar isOpen={isLeftBarOpen} />
         <Routes>
           <Route path="/" element={<Home isOpen={isLeftBarOpen} />} />
