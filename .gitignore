@@ -22,4 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+*.pub
+>>>>>>> 86ba81049f330e141d1e3cead7158729f968fbac
 .pub

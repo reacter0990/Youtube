@@ -447,7 +447,7 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
-function NotificationsModal({ isOpen }) {
+const NotificationsModal = ({ isOpen }) => {
   const list = [
     {
       logo: "https://yt3.ggpht.com/FVJpJyrV85TDL2nyiFbnaBuZzuYX1thQywPXCvilPAuw7DmPjFoXphPgkCqekYNIfqFtqGrvCg=s88-c-k-c0x00ffffff-no-rj",
@@ -505,49 +505,51 @@ function NotificationsModal({ isOpen }) {
       {!isOpen ? (
         <Box></Box>
       ) : (
+        <Box
+          maxWidth={480}
+          position={"fixed"}
+          top={61}
+          minHeight={580}
+          width={"100%"}
+          zIndex={99}
+          right={20}
+          bgcolor={"#323232"}
+          sx={{ borderRadius: "10px" }}
+          overflow={"hidden"}
+        >
           <Box
-            maxWidth={480}
-            position={"fixed"}
-            top={50}
-            minHeight={580}
-            width={"100%"}
-            zIndex={99}
-            right={20}
-            bgcolor={"#323232"}
-            sx={{ borderRadius: "10px" }}>
-            <Box
-              maxHeight={580}
-              pt={2}
-              pl={2}
-              pr={1}
-              display={"grid"}
-              gridTemplateColumns={"auto"}
-              rowGap={"10px"}
-              sx={{
-                overflowX: "hidden",
-                overflowY: isScrollBarFocused ? "auto" : "hidden",
-              }}
-              onMouseEnter={() => setIsScrollBarFocused(true)}
-              onMouseLeave={() => setIsScrollBarFocused(false)}
-            >
-              {list.map((block, index) => {
-                return (
-                  <Array
-                    key={index}
-                    index={index}
-                    logo={block.logo}
-                    text={block.text}
-                    description={block.description}
-                    image={block.image}
-                  />
-                );
-              })}
-            </Box>
+            maxHeight={580}
+            pt={2}
+            pl={2}
+            pr={1}
+            display={"grid"}
+            gridTemplateColumns={"auto"}
+            rowGap={"10px"}
+            sx={{
+              overflowX: "hidden",
+              overflowY: isScrollBarFocused ? "auto" : "hidden",
+            }}
+            onMouseEnter={() => setIsScrollBarFocused(true)}
+            onMouseLeave={() => setIsScrollBarFocused(false)}
+          >
+            {list.map((block, index) => {
+              return (
+                <Array
+                  key={index}
+                  index={index}
+                  logo={block.logo}
+                  text={block.text}
+                  description={block.description}
+                  image={block.image}
+                />
+              );
+            })}
           </Box>
+        </Box>
       )}
     </>
   );
-}
+};
 
 const Array = ({ index, logo, text, description, image }) => {
   return (
@@ -701,6 +703,3 @@ const RightBox: React.FC = () => {
 };
 
 export default RightBox;
-
-
-////new commit

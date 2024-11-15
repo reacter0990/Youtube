@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box } from "@mui/material";
 import LeftBox from "./NavbarItems/LeftBox";
 import CenterBox from "./NavbarItems/CenterBox";
 import RightBox from "./NavbarItems/RightBox";
-import NotificationsModal from "./NotificationsModal";
 // import Logo from '../assets/YouTube-Logo.wine.svg'
 
-const Navbar: React.FC = ({ toggleLeftBar, toggleModalOpen, isOpen }) => {
+const Navbar = ({ toggleLeftBar, toggleModalOpen, isOpen }) => {
   return (
     <Box
       pt={1.1}
@@ -24,8 +23,7 @@ const Navbar: React.FC = ({ toggleLeftBar, toggleModalOpen, isOpen }) => {
     >
       <LeftBox toggleLeftBar={toggleLeftBar} />
       <CenterBox />
-      <RightBox toggleModalOpen={toggleModalOpen} />
-      <NotificationsModal isOpen={isOpen} />
+      <RightBox toggleModalOpen={toggleModalOpen} isOpen={isOpen} />
     </Box>
   );
 };

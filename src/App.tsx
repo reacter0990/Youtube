@@ -20,13 +20,12 @@ function App() {
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen)
-    console.log(setIsModalOpen)
   }
   return (
     <Box flexGrow={1}>
       <Router>
         <Navbar toggleModalOpen={toggleModalOpen} toggleLeftBar={toggleLeftBar} />
-        <BottomBar isOpen={isLeftBarOpen} />
+        <BottomBar />
         <LeftBar isOpen={isLeftBarOpen} />
         <Routes>
           <Route path="/" element={<Home isOpen={isLeftBarOpen} />} />
