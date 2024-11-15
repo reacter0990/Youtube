@@ -332,7 +332,7 @@ export const ArrayTwo: Array<JSX.Element> = [
 ];
 
 export const ArrayThree: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
+  <List sx={{ pl: 2, pr: 2, minWidth: 250}}>
     <ListItem sx={{ p: 0 }} key={uuidv4()}>
       <ListItemButton
         sx={{

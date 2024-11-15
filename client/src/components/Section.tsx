@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid2'
 import Card from './Card'
 
 const Section = () => {
+
   return (
     <Box flexGrow={1} pl={'20px'} pr={'20px'}>
       <Box flexGrow={1} position={'relative'}
@@ -66,18 +67,11 @@ const Section = () => {
       </Box>
       <Box flexGrow={1} pt={'24px'} pl={'245px'}>
         <Grid container spacing={2.8}>
-          <Grid size={4}>
-            <Card />
-          </Grid>
-          <Grid size={4}>
-            <Card />
-          </Grid>
-          <Grid size={4}>
-            <Card />
-          </Grid>
-          <Grid size={4}>
-            <Card />
-          </Grid>
+          {[1,2,3,4,5,6,7,8,9,10,11,12,13].map((item) => (
+            <Grid size={4} key={item}>
+              <Card/>
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Box>
