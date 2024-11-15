@@ -29,6 +29,7 @@ const CenterBox = () => {
             appearance: "none",
             height: 40,
             maxHeight: 40,
+            fontFamily: 'Roboto',
             width: isFocused ? "480px" : "536px",
             paddingLeft: 15,
             outline: "none",

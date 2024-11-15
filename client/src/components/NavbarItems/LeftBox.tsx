@@ -2,7 +2,7 @@ import { Box, IconButton } from '@mui/material'
 const LeftBox = () => {
   return (
     <Box component={'div'} display={'flex'} alignItems={'center'} position={'relative'} 
-    flexGrow={1}
+    flexGrow={1} maxWidth={'169px'}
     >
       <IconButton color='inherit'
         sx={{

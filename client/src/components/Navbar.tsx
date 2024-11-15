@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       position={"fixed"}
       display={"flex"}
       justifyContent={"space-between"}
-      bgcolor={"#000000"}>
+      bgcolor={'#000000'}>
       <LeftBox />
       <CenterBox />
       <RightBox />

@@ -8,7 +8,6 @@ import {
   ArraySix,
 } from "../TS/Arrays";
 import React from "react";
-import LeftBox from "./NavbarItems/LeftBox";
 
 const Menu = () => {
   const [isHovered, setIsHovered] = React.useState(false);
