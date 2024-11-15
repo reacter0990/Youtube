@@ -12,8 +12,8 @@ import classes from "../css/Menu.module.css";
 import { HomeSVG, ShortSVG, FollowSVG } from "../SVG/SVG";
 
 export const ArrayOne: Array<JSX.Element> = [
-  <List sx={{ pt: 1.5, pl: 2, pr: 2, pb: 0 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pt: 1.5, pl: 2, pr: 2, pb: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           bgcolor: "#212121",
@@ -32,7 +32,7 @@ export const ArrayOne: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -50,7 +50,7 @@ export const ArrayOne: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -75,8 +75,8 @@ export const ArrayOne: Array<JSX.Element> = [
 ];
 
 export const ArrayTwo: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pl: 2, pr: 2 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           // bgcolor: '#212121',
@@ -113,7 +113,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()} className={classes.link}>
+    <ListItem sx={{ p: 0 }} className={classes.link}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -149,7 +149,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -184,7 +184,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -219,7 +219,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -254,7 +254,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -289,7 +289,7 @@ export const ArrayTwo: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           pr: 2,
@@ -332,8 +332,8 @@ export const ArrayTwo: Array<JSX.Element> = [
 ];
 
 export const ArrayThree: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pl: 2, pr: 2, minWidth: 250}} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -374,7 +374,7 @@ export const ArrayThree: Array<JSX.Element> = [
         </ListItemIcon>
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -415,7 +415,7 @@ export const ArrayThree: Array<JSX.Element> = [
         </ListItemIcon>
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -464,8 +464,8 @@ export const ArrayThree: Array<JSX.Element> = [
 ];
 
 export const ArrayFour: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pl: 2, pr: 2 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -499,7 +499,7 @@ export const ArrayFour: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -533,7 +533,7 @@ export const ArrayFour: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -567,7 +567,7 @@ export const ArrayFour: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -609,8 +609,8 @@ export const ArrayFour: Array<JSX.Element> = [
 ];
 
 export const ArrayFive: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pl: 2, pr: 2 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -621,15 +621,15 @@ export const ArrayFive: Array<JSX.Element> = [
         <ListItemIcon sx={{ minWidth: 50 }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             version="1.1"
             x="0px"
             y="0px"
             width="24px"
             height="24px"
             viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
-            xml:space="preserve"
+            enableBackground="new 0 0 24 24"
+            xmlSpace="preserve"
             focusable="false"
             aria-hidden="true"
             style={{
@@ -651,7 +651,7 @@ export const ArrayFive: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -662,15 +662,15 @@ export const ArrayFive: Array<JSX.Element> = [
         <ListItemIcon sx={{ minWidth: 50 }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             version="1.1"
             x="0px"
             y="0px"
             width="24px"
             height="24px"
             viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
-            xml:space="preserve"
+            enableBackground="new 0 0 24 24"
+            xmlSpace="preserve"
             focusable="false"
             aria-hidden="true"
             style={{
@@ -695,7 +695,7 @@ export const ArrayFive: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -706,15 +706,15 @@ export const ArrayFive: Array<JSX.Element> = [
         <ListItemIcon sx={{ minWidth: 50 }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             version="1.1"
             x="0px"
             y="0px"
             width="24px"
             height="24px"
             viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
-            xml:space="preserve"
+            enableBackground="new 0 0 24 24"
+            xmlSpace="preserve"
             focusable="false"
             aria-hidden="true"
             style={{
@@ -742,7 +742,7 @@ export const ArrayFive: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -753,15 +753,15 @@ export const ArrayFive: Array<JSX.Element> = [
         <ListItemIcon sx={{ minWidth: 50 }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             version="1.1"
             x="0px"
             y="0px"
             width="24px"
             height="24px"
             viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
-            xml:space="preserve"
+            enableBackground="new 0 0 24 24"
+            xmlSpace="preserve"
             focusable="false"
             aria-hidden="true"
             style={{
@@ -803,8 +803,8 @@ export const ArrayFive: Array<JSX.Element> = [
 ];
 
 export const ArraySix: Array<JSX.Element> = [
-  <List sx={{ pl: 2, pr: 2 }}>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+  <List sx={{ pl: 2, pr: 2 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -838,7 +838,7 @@ export const ArraySix: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -872,7 +872,7 @@ export const ArraySix: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
@@ -906,7 +906,7 @@ export const ArraySix: Array<JSX.Element> = [
         />
       </ListItemButton>
     </ListItem>
-    <ListItem sx={{ p: 0 }} key={uuidv4()}>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton
         sx={{
           borderRadius: 3,
