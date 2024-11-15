@@ -611,22 +611,6 @@ const Array = ({ index, logo, text, description, image }) => {
 
 export { Array };
 
-function Create() {
-  return (
-    <Box maxWidth={100} maxHeight={80}>
-      <List>
-        <ListItem>
-          <ListItemButton>
-            <ListItemIcon>
-
-            </ListItemIcon>
-          </ListItemButton>
-        </ListItem>
-      </List>
-    </Box>
-  )
-}
-
 const RightBox: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(emails[1]);
@@ -645,12 +629,6 @@ const RightBox: React.FC = () => {
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
-
-  const [ isCreateModalOpen, setIsCreateModalOpen ] = useState(false);
-
-  const toggleCreateModal = () => {
-    setIsCreateModalOpen(!isCreateModalOpen)
-  }
   return (
     <Box
       display={"flex"}
@@ -668,12 +646,10 @@ const RightBox: React.FC = () => {
               backgroundColor: "rgba(255,255,255,0.2)",
             },
           }}
-          onClick={toggleCreateModal}
         >
           <MdOutlineVideoCall fontSize={25} />
         </IconButton>
       </Tooltip>
-      <Create isOpen={isCreateModalOpen} />
       <Tooltip title="Notifications">
         <IconButton
           color="inherit"
